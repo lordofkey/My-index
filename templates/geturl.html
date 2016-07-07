@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="{{ url_for('static',filename = 'jquery-3.0.0.min.js') }}"></script>
+</head>
+<body>
+<div>
+    <form>
+        <ul>
+            <li>
+                标题
+                <input id="title" type="text" >
+            </li>
+            <li>
+                网址
+                <input id = "urlcontent" type="text" >
+            </li>
+            <li>
+                <input  id = "urlselector" type="button" value="确定">
+            </li>
+        </ul>
+    </form>
+</div>
+<script>
+    document.getElementById("urlselector").addEventListener('click',function (){
+        var mark = document.getElementById("urlcontent").value
+        var title = document.getElementById("title").value
+        $.post("{{ url_for('getbook') }}",{book:mark,title:title},function(data){
+            alert(data.rename)
+        })
+        console.log(tt)
+    },true)
+</script>
+</body>
+</html>
