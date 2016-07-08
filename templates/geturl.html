@@ -28,9 +28,8 @@
         var mark = document.getElementById("urlcontent").value
         var title = document.getElementById("title").value
         $.post("{{ url_for('getbook') }}",{book:mark,title:title},function(data){
-            alert(data.rename)
+            alert(data)
         })
-        console.log(tt)
     },true)
 </script>
 </body>

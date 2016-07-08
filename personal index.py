@@ -5,9 +5,8 @@ from flask import render_template
 from flask import url_for
 from flask import request
 
-import xmllib
+from db import Mydblib
 
-ospath = os.path.dirname(__file__)
 app = Flask(__name__)
 
 
@@ -35,14 +34,16 @@ def getbook():
     if request.method == 'POST':
         text = request.form["book"]
         title = request.form["title"]
-        xmllib.addbookmark(text,title,ospath+"/db/bookmark.xml")
+        db = Mydblib.Mydblib()
+        db.addbookmark(title,text)
+        db.save()
         return "rename:woshi" + text
     else:
         return "arg error"
 
 
 if __name__ == '__main__':
-    app.run(port="80")
+    app.run(port="5551")
 
 
 

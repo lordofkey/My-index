@@ -2,7 +2,9 @@
 
 import xml.dom.minidom as domlib
 import re
+import os
 
+ospath = os.path.dirname(__file__)
 
 topHostPostfix = (
     '.com', '.la', '.io', '.co', '.info', '.net', '.org', '.me', '.mobi',
@@ -21,7 +23,7 @@ pattern = re.compile(regx, re.IGNORECASE)
 
 
 class Mydblib:
-    filename = "test.xml"
+    filename = ospath + "/test.xml"
     def __init__(self):
         try:
             self.dom = domlib.parse(self.filename)
