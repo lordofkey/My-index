@@ -40,7 +40,11 @@ def getbook():
         return "rename:woshi" + text
     else:
         return "arg error"
-
+@app.route('/ajax/getbookmarks', methods=['GET'])
+def getbookmarks():
+    db = Mydblib.Mydblib()
+    redict = str(db.getbookmarks())
+    return redict
 
 if __name__ == '__main__':
     app.run(port="5551")

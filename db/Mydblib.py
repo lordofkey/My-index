@@ -54,7 +54,15 @@ class Mydblib:
             tarbooknode.setAttribute("title",title)
             self.root.appendChild(tarbooknode)
         tarbooknode.setAttribute("url",url)
+    def getbookmarks(self):
+        bookmarks = {}
+        booknodes = self.dom.getElementsByTagName("bookmark")
+        for booknode in booknodes:
+            title = booknode.getAttribute('title').encode("utf-8")
+            url = booknode.getAttribute('url').encode("utf-8")
+            bookmarks[title] = url
+        return bookmarks
 if __name__ == "__main__":
     db = Mydblib()
-    db.addbookmark()
-    db.save()
+    books = db.getbookmarks()
+    print books

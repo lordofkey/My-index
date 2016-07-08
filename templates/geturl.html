@@ -23,6 +23,11 @@
         </ul>
     </form>
 </div>
+<div>
+    <ul id = "list">
+        <a href="">
+    </ul>
+</div>
 <script>
     document.getElementById("urlselector").addEventListener('click',function (){
         var mark = document.getElementById("urlcontent").value
@@ -31,6 +36,16 @@
             alert(data)
         })
     },true)
+    $(document).ready(function(){
+        $.get("{{ url_for('getbookmarks') }}",0,function(data){
+            tt = eval("("+data+")")
+            for (var key in tt) {
+                node = document.createElement("li")
+                node.innerHTML = "<a href='"+tt[key]+"'>" + key + "</a>"
+                document.getElementById("list").appendChild(node)
+             }
+         })
+        })
 </script>
 </body>
 </html>
