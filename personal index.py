@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-import os
 from flask import Flask
 from flask import render_template
 from flask import url_for
 from flask import request
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from db import Mydblib
 
 app = Flask(__name__)
@@ -37,7 +38,7 @@ def getbook():
         db = Mydblib.Mydblib()
         db.addbookmark(title,text)
         db.save()
-        return "rename:woshi" + text
+        return "已经成功加入书签：" + title
     else:
         return "arg error"
 @app.route('/ajax/getbookmarks', methods=['GET'])

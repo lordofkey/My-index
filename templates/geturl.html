@@ -25,7 +25,6 @@
 </div>
 <div>
     <ul id = "list">
-        <a href="">
     </ul>
 </div>
 <script>
@@ -34,18 +33,23 @@
         var title = document.getElementById("title").value
         $.post("{{ url_for('getbook') }}",{book:mark,title:title},function(data){
             alert(data)
+            refreshbookmark()
+
         })
     },true)
-    $(document).ready(function(){
+    $(document).ready(refreshbookmark())
+
+    function refreshbookmark(){
         $.get("{{ url_for('getbookmarks') }}",0,function(data){
             tt = eval("("+data+")")
+            document.getElementById("list").innerHTML = ""
             for (var key in tt) {
                 node = document.createElement("li")
                 node.innerHTML = "<a href='"+tt[key]+"'>" + key + "</a>"
                 document.getElementById("list").appendChild(node)
              }
          })
-        })
+        }
 </script>
 </body>
 </html>
