@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4ddaafe-5152-4b28-a33a-8ed941d71003" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/test.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/personal index.iml" afterPath="$PROJECT_DIR$/.idea/personal index.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal index.py" afterPath="$PROJECT_DIR$/personal index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/geturl.html" afterPath="$PROJECT_DIR$/templates/geturl.html" />
-    </list>
+    <list default="true" id="e4ddaafe-5152-4b28-a33a-8ed941d71003" name="Default" comment="" />
     <ignored path="personal index.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -44,8 +37,8 @@
       <file leaf-file-name="Mydblib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/Mydblib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+            <state relative-caret-position="99">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding>
                 <element signature="e#15#47#0" expanded="true" />
               </folding>
@@ -118,8 +111,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
-    <option name="y" value="29" />
+    <option name="x" value="-276" />
+    <option name="y" value="121" />
     <option name="width" value="1452" />
     <option name="height" value="865" />
   </component>
@@ -555,7 +548,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="29" width="1452" height="865" extended-state="0" />
+    <frame x="-276" y="121" width="1452" height="865" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28887305" sideWeight="0.4876033" order="0" side_tool="false" content_ui="combo" />
@@ -963,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/Mydblib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        <state relative-caret-position="99">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <element signature="e#15#47#0" expanded="true" />
           </folding>
